@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Site vulnérable</title>
+
+  <!-- ❌ Aucune politique de sécurité, aucun HTTPS -->
+  <script>alert("Bienvenue, mais attention à la sécurité !")</script>
+</head>
+<body>
+  <h1>Bienvenue sur mon site</h1>
+  <p>Ceci est une démonstration d'un site non sécurisé pour test cybersécurité.</p>
+
+  <!-- ❌ Formulaire sans HTTPS -->
+  <form action="http://example.com/login" method="post">
+    <label for="email">Email :</label>
+    <input type="text" name="email" id="email"><br><br>
+    
+    <label for="mdp">Mot de passe :</label>
+    <input type="password" name="mdp" id="mdp"><br><br>
+
+    <input type="submit" value="Connexion">
+  </form>
+
+  <!-- ❌ Champs modifiables avec contenu JS potentiellement injectable -->
+  <div>
+    Vos commentaires :
+    <textarea name="comment">Écrivez ici...</textarea>
+  </div>
+
+  <!-- ❌ Pas de sécurité, pas de CAPTCHA, pas de vérification -->
+</body>
+</html>
